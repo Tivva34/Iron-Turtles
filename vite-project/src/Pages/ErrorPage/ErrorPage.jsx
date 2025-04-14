@@ -1,7 +1,7 @@
 import React from "react";
 import "./ErrorPage.css";
 import TurtleSVG from "../../assets/404-turtle.svg";
-import Button from "../../components/Button"; // Anpassa sökvägen om din mappstruktur är annorlunda
+import Button from "../../components/Button";
 
 
 function ErrorPage() {
