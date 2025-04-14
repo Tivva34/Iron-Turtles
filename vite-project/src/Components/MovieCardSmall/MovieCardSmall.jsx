@@ -1,15 +1,14 @@
-// import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button";
-// import { useLocalStorageWatchlist } from "../../Scripts/useLocalStorageWatchlist";
+import { useOutletContext } from "react-router-dom";
 
 function MovieCardSmall({ movie }) {
-  // const { watchlist, addToWatchlist, removeFromWatchlist } = useLocalStorageWatchlist();
+  const { watchlist, addToWatchlist, removeFromWatchlist } = useOutletContext(); //Outlet används i RootLayout används därför här för att "packa upp" innehållet som kommer med från RootLayout via App.jsx
 
-  // const isInWatchlist = (book) => {
-  //   if (watchlist.some((b) => b.id === book.id)) return true;
-  //   else return false;
-  // };
+  const isInWatchlist = (book) => {
+    if (watchlist.some((b) => b.id === book.id)) return true;
+    else return false;
+  };
 
   return (
     <>
@@ -22,16 +21,16 @@ function MovieCardSmall({ movie }) {
             <h3 className="list-item__title">{movie.Title}</h3>
           </li>
         </Link>
-        {/* {isInWatchlist(movie) ? (
+        {isInWatchlist(movie) ? (
           <Button
             id={"smallCardBtn"}
             className={"lite-item__button"}
-            onClickFunction={() => removeFromWatchlist(movie)}
+            onClickFunction={() => removeFromWatchlist(movie.id)}
             btntext={"Remove"}
           />
         ) : (
           <Button id={"smallCardBtn"} className={"lite-item__button"} onClickFunction={() => addToWatchlist(movie)} btntext={"Save"} />
-        )} */}
+        )}
       </div>
     </>
   );

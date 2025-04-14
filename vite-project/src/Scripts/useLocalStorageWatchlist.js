@@ -15,6 +15,8 @@ export const useLocalStorageWatchlist = () => {
   };
 
   const removeFromWatchlist = (id) => {
+    console.log(id);
+
     setWatchlist((prev) => prev.filter((b) => b.id !== id));
   };
 
