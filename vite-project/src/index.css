@@ -1,6 +1,69 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+}
+
+:root {
+  --white: #f0e7e2;
+  --black: #050116;
+  --dark-grey: #3d3b48;
+  --purple: #460af1;
+  --turqouise: #6ecdc7;
+  --orange: #fa7e05;
+
+  /* Fonts */
+  --font-baloo-h1: 600 32pt/30pt "Baloo 2", sans-serif; /* Page Heading */
+  --font-baloo-h2: 700 16pt/20pt "Baloo 2", sans-serif; /* Modul & Button Heading */
+  --font-inter-h3: 700 12pt/15pt "Inter", sans-serif; /* Content Heading */
+  --font-inter-h4: 500 9pt/12pt "Inter", sans-serif; /* Content Sub-Heading */
+  --font-inter-h5: 700 8pt/10pt "Inter", sans-serif; /* Icon Heading */
+  --font-inter-text: 14pt/14pt "Inter", sans-serif; /* Text */
+  --font-inter-error: 10pt/12pt "Inter", sans-serif; /* error msg */
+}
+
+h1 {
+  font: var(--font-baloo-h1);
+}
+h2 {
+  font: var(--font-baloo-h2);
+}
+h3 {
+  font: var(--font-inter-h3);
+}
+h4 {
+  font: var(--font-inter-h4);
+}
+h5 {
+  font: var(--font-inter-h5);
+}
+p {
+  font: var(--font-inter-text);
+}
+span {
+  font: var(--font-inter-error);
+}
+
+.app {
+  background-color: var(--dark-grey);
+}
+
+@keyframes wag {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+.error__turtle {
+  animation: wag 2s infinite ease-in-out;
+  transform-origin: center;
 }
