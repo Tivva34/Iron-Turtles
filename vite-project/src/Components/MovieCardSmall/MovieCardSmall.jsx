@@ -1,22 +1,36 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button";
+import { useOutletContext } from "react-router-dom";
 
 function MovieCardSmall({ movie }) {
-  console.log(movie);
+  const { watchlist, addToWatchlist, removeFromWatchlist } = useOutletContext(); //Outlet används i RootLayout används därför här för att "packa upp" innehållet som kommer med från RootLayout via App.jsx
+
+  const isInWatchlist = (book) => {
+    if (watchlist.some((b) => b.id === book.id)) return true;
+    else return false;
+  };
 
   return (
     <>
-      <div className="list-item__div">
+      <div id={movie.id} className="list-item__div">
         <Link className="nav-link">
           <li className="list-item__li">
             <div className="list-item__img-div">
-              <img src={movie.Poster} alt="" className="list-item__img" />
+              <img src={movie.Poster} alt={`Poster of ${movie.Title}`} className="list-item__img" />
             </div>
             <h3 className="list-item__title">{movie.Title}</h3>
           </li>
         </Link>
-        <Button id={"smallCardBtn"} className={"lite-item__button"} btntext={"Save"} />
+        {isInWatchlist(movie) ? (
+          <Button
+            id={"smallCardBtn"}
+            className={"lite-item__button"}
+            onClickFunction={() => removeFromWatchlist(movie.id)}
+            btntext={"Remove"}
+          />
+        ) : (
+          <Button id={"smallCardBtn"} className={"lite-item__button"} onClickFunction={() => addToWatchlist(movie)} btntext={"Save"} />
+        )}
       </div>
     </>
   );
