@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './watchListPage.css'
+import "./watchListPage.css";
 
-function WatchListPage() {
+function WatchListPage(testArr) {
   return <h1>WatchListPage</h1>;
 }
 

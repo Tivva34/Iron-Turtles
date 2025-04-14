@@ -1,7 +1,15 @@
 import React from "react";
-import styles from './startPage.css'
+import List from "../../Components/List";
+import "./startPage.css";
+import testMovies from "../../data/testMovies";
+
 function StartPage() {
-  return <h1>StartPage</h1>;
+  return (
+    <>
+      <h1>Startpage</h1>
+      <List movieList={testMovies} />
+    </>
+  );
 }
 
 export default StartPage;

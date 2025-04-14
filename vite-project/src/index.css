@@ -67,3 +67,8 @@ span {
   animation: wag 2s infinite ease-in-out;
   transform-origin: center;
 }
+
+.nav-link {
+  text-decoration: none;
+  color: var(--black);
+}
