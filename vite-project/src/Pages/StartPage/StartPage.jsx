@@ -1,7 +1,12 @@
 import React from "react";
+import List from "../../Components/List";
 
 function StartPage() {
-  return <h1>StartPage</h1>;
+  return (
+    <>
+      <List />
+    </>
+  );
 }
 
 export default StartPage;
