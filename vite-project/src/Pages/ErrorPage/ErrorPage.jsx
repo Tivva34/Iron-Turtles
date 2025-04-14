@@ -1,8 +1,17 @@
 import React from "react";
-import "./errorPage.css";
+import "./ErrorPage.css";
+import TurtleSVG from "../../assets/404-turtle.svg";
+import Button from "../../components/Button"; // Anpassa sökvägen om din mappstruktur är annorlunda
+
 
 function ErrorPage() {
-  return <h1>ErrorPage</h1>;
+  return (
+    <div className="error-container">
+      <h1>Oh no! This was not supposed to happen...</h1>
+      <img src={TurtleSVG} alt="404 Turtle" className="error__turtle"/>
+      <Button id="go-back" className="errorpage__button" onClickFunction={() => window.history.back()} btntext="← Take me back"/>
+    </div>
+  );
 }
 
 export default ErrorPage;

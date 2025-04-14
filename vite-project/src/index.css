@@ -64,6 +64,7 @@ span {
 }
 
 .error__turtle {
+  margin: 5rem;
   animation: wag 2s infinite ease-in-out;
   transform-origin: center;
 }
@@ -71,4 +72,23 @@ span {
 .nav-link {
   text-decoration: none;
   color: var(--black);
+}
+
+.errorpage__button {
+  padding:1rem;
+  border-radius: 10px;
+  border: 2px solid var(--white);
+  background-color: #240745;
+  color: var(--white);
+  font: var(--font-baloo-h1);
+  margin-bottom: 15rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.errorpage__button:hover {
+  cursor: pointer;
+  background-color: #3e0e76;
+  border: 2px solid var(--purple);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
