@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
@@ -6,6 +7,15 @@ import SearchPage from './Pages/SearchPage/SearchPage';
 import StartPage from './Pages/StartPage/StartPage';
 import WatchListPage from './Pages/WatchListPage/WatchListPage';
 import MovieCaroussel from './Components/MovieCaroussel';
+=======
+// import { useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import MoviePage from "./Pages/MoviePage/MoviePage";
+import SearchPage from "./Pages/SearchPage/SearchPage";
+import StartPage from "./Pages/StartPage/StartPage";
+import WatchListPage from "./Pages/WatchListPage/WatchListPage";
+>>>>>>> dev
 
 function App() {
 	const router = createBrowserRouter([
