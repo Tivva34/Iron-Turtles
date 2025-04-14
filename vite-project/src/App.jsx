@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
+// import { useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import MoviePage from "./Pages/MoviePage/MoviePage";
 import SearchPage from "./Pages/SearchPage/SearchPage";

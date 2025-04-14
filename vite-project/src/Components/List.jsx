@@ -1,10 +1,10 @@
-import React from "react";
+import MovieCardSmall from "./MovieCardSmall/MovieCardSmall";
 
-function List(arr) {
+function List({ movieList }) {
   return (
     <ul className="list">
-      {arr.map((item) => {
-        return <MovieCardSmall>{item}</MovieCardSmall>;
+      {movieList.map((movie, index) => {
+        return <MovieCardSmall key={index} movie={movie} />;
       })}
     </ul>
   );

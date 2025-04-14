@@ -1,11 +1,13 @@
 import React from "react";
 import List from "../../Components/List";
+import "./startPage.css";
+import testMovies from "../../data/testMovies";
 
-import styles from "./startPage.css";
 function StartPage() {
   return (
     <>
-      <List />
+      <h1>Startpage</h1>
+      <List movieList={testMovies} />
     </>
   );
 }

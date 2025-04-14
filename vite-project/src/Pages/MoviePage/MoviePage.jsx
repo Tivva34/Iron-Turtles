@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './moviePage.css'
+import "./moviePage.css";
 
 function MoviePage() {
   return <h1>MoviePage</h1>;
