@@ -6,10 +6,10 @@ import Button from "../Button";
 function MovieCardSmall({ movie }) {
   // const { watchlist, addToWatchlist, removeFromWatchlist } = useLocalStorageWatchlist();
 
-  const isInWatchlist = (book) => {
-    if (watchlist.some((b) => b.id === book.id)) return true;
-    else return false;
-  };
+  // const isInWatchlist = (book) => {
+  //   if (watchlist.some((b) => b.id === book.id)) return true;
+  //   else return false;
+  // };
 
   return (
     <>
@@ -22,7 +22,7 @@ function MovieCardSmall({ movie }) {
             <h3 className="list-item__title">{movie.Title}</h3>
           </li>
         </Link>
-        {isInWatchlist(movie) ? (
+        {/* {isInWatchlist(movie) ? (
           <Button
             id={"smallCardBtn"}
             className={"lite-item__button"}
@@ -31,7 +31,7 @@ function MovieCardSmall({ movie }) {
           />
         ) : (
           <Button id={"smallCardBtn"} className={"lite-item__button"} onClickFunction={() => addToWatchlist(movie)} btntext={"Save"} />
-        )}
+        )} */}
       </div>
     </>
   );
