@@ -3,6 +3,7 @@ import List from "../../Components/List";
 import "./startPage.css";
 import MovieCarousel from "../../Components/MovieCarousel/MovieCarousel";
 import { useFetch } from "../../Scripts/useFetch";
+// import Header from "../../Components/Header";
 
 //  "Fisher-Yates shuffle-algorit" funktion för att slumpa ordningen på arrayen
 const shuffleArray = (array) => {
@@ -35,6 +36,7 @@ function StartPage() {
 
   return (
     <section>
+      {/* <Header /> */}
       <MovieCarousel />
       <h1>The Turtles Recommend</h1>
       {addIdToArr && <List arr={shuffledMovies} />}
