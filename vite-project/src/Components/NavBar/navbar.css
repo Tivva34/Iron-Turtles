@@ -1,0 +1,8 @@
+.nav__list {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 3rem;
+}

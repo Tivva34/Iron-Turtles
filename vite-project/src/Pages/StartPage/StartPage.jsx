@@ -3,11 +3,12 @@ import List from '../../Components/List';
 import './startPage.css';
 import testMovies from '../../data/testMovies';
 import MovieCarousel from '../../Components/MovieCarousel/MovieCarousel';
+import Header from '../../Components/Header';
 
 function StartPage() {
 	return (
 		<>
-			<h1>Startpage</h1>
+			<Header />
 			<MovieCarousel />
 			<List movieList={testMovies} />
 		</>

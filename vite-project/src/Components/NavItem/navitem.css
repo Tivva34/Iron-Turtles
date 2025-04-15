@@ -1,0 +1,15 @@
+.nav__item {
+    padding: .5rem;
+    cursor: pointer;
+
+    .nav__link {
+        color: #6ecdc7;
+        text-decoration: none;
+    }
+    
+}
+
+.nav__item:hover {
+   color: #fa7e05;
+   text-decoration: underline;
+}
