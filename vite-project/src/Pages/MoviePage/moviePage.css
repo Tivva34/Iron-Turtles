@@ -1,0 +1,36 @@
+.movie-page {
+    padding: 2rem;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+}
+
+.movie-header {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.movie-poster {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-details {
+    max-width: 600px;
+    padding: 1rem;
+    background-color: var(--dark-grey);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-title {
+    font: var(--font-baloo-h1);
+    margin-bottom: 1rem;
+}
+
+.movie-details p {
+    font: var(--font-inter-text);
+    margin-bottom: 0.5rem;
+}
