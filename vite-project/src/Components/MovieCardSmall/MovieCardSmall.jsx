@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import Button from "../Button";
+import Button from "../../components/Button";
 import { useOutletContext } from "react-router-dom";
+import Logo from "../Logo/Logo";
 
-function MovieCardSmall({ movie }) {
+function MovieCardSmall({ movie, movieid }) {
   const { watchlist, addToWatchlist, removeFromWatchlist } = useOutletContext(); //Outlet används i RootLayout används därför här för att "packa upp" innehållet som kommer med från RootLayout via App.jsx
 
   const isInWatchlist = (book) => {
@@ -29,7 +30,12 @@ function MovieCardSmall({ movie }) {
             btntext={"Remove"}
           />
         ) : (
-          <Button id={"smallCardBtn"} className={"errorpage__button lite-item__button"} onClickFunction={() => addToWatchlist(movie)} btntext={"Save"} />
+          <Button
+            id={"smallCardBtn"}
+            className={"errorpage__button lite-item__button"}
+            onClickFunction={() => addToWatchlist(movie)}
+            btntext={"Save"}
+          />
         )}
       </div>
     </>

@@ -1,13 +1,12 @@
-.search__section {
-    background-color: #ffffff;
-    padding: 0 10px;
-    border: none;
-    border-radius: 5px;
+.search__form {
+  background-color: #ffffff;
+  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 .search__input {
-    padding: 10px;
-    width: 300px;
-    border: none;
-    
+  padding: 10px;
+  width: 300px;
+  border: none;
 }
