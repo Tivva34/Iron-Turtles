@@ -1,35 +1,28 @@
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import NavItem from '../NavItem/NavItem';
-import './navbar.css';
+import NavItem from "../NavItem/NavItem";
+import "./navbar.css";
 
 function NavBar() {
-    const navItems = [
-        {            
-            name: "Home",
-            endpoint: "/",
-           
-        },
-        {
-            name: "My Watchlist",
-            endpoint: "/movie",
-           
-        },
-    ];
+  const navItems = [
+    {
+      name: "Home",
+      endpoint: "/",
+    },
+    {
+      name: "My Watchlist",
+      endpoint: "/watchlist",
+    },
+  ];
 
-    return (
-        <nav className="nav">
-            <ul className="nav__list">
-                {
-                    navItems.map((item, index) => {
-                        return <NavItem 
-                            key={index}
-                            navItem={item}
-                        />
-                    })
-                }
-            </ul>
-        </nav>
-    );
+  return (
+    <nav className="nav">
+      <ul className="nav__list">
+        {navItems.map((item, index) => {
+          return <NavItem key={index} navItem={item} />;
+        })}
+      </ul>
+    </nav>
+  );
 }
 
 export default NavBar;
@@ -44,11 +37,11 @@ export default NavBar;
 
 // function NavBar() {
 //     const navItems = [
-//         {            
+//         {
 //             name: "Home",
 //             endpoint: "/",
 //             icon: <i class="fa-solid fa-house"></i>, // Lägg till ikonen här
-//         }, 
+//         },
 //         {
 //             name: "My Watchlist",
 //             endpoint: "/movie",
@@ -61,7 +54,7 @@ export default NavBar;
 //             <ul className="nav__list">
 //                 {
 //                     navItems.map((item, index) => {
-//                         return <NavItem 
+//                         return <NavItem
 //                             key={index}
 //                             navItem={item}
 //                         />

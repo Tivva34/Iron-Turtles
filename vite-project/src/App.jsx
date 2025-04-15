@@ -10,10 +10,10 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <RootLayout />, // Alla children får med sig innehållet i RootLayout, d.v.s. watchlist,addToWatchlist och removeFromWatchlist
+      element: <RootLayout />, // Alla barn till den här komponenten får med sig innehållet i RootLayout, d.v.s. watchlist,addToWatchlist och removeFromWatchlist samt header och footer.
       errorElement: <ErrorPage />,
       children: [
-        { path: "/", element: <StartPage /> },
+        { path: "/", element: <StartPage />, errorElement: <ErrorPage /> },
         {
           path: "/movie/:id",
           element: <MoviePage />,
