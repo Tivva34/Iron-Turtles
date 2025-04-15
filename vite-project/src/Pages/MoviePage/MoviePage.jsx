@@ -1,10 +1,13 @@
-import Header from '../../Components/Header';
+// import Header from "../../Components/Header";
 import "./moviePage.css";
 
 function MoviePage() {
   return (
-  <Header />
-);
+    <>
+      {/* <Header /> */}
+      <h1>MoviePage</h1>
+    </>
+  );
 }
 
 export default MoviePage;

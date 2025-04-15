@@ -1,9 +1,10 @@
-import Header from '../../Components/Header';
+// import Header from '../../Components/Header';
 import "./searchPage.css";
 
 function SearchPage() {
   return (
-    <Header />
+    <h1>Search Results</h1>
+    // <Header />
   );
 }
 
