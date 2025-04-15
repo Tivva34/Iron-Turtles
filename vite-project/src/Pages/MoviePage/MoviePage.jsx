@@ -1,8 +1,10 @@
-import React from "react";
+import Header from '../../Components/Header';
 import "./moviePage.css";
 
 function MoviePage() {
-  return <h1>MoviePage</h1>;
+  return (
+  <Header />
+);
 }
 
 export default MoviePage;
