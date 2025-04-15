@@ -7,6 +7,7 @@ function NavItem({navItem}) {
       className="nav__item"
     >
       <Link to={navItem.endpoint} className="nav__link">
+        {navItem.icon}
         {navItem.name}
       </Link>
     </li>

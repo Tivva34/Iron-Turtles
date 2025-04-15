@@ -1,16 +1,19 @@
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaHome, FaEye } from "react-icons/fa";
 import NavItem from "../NavItem/NavItem";
 import "./navbar.css";
 
 function NavBar() {
   const navItems = [
     {
+
       name: "Home",
       endpoint: "/",
+      icon: <FaHome />,
     },
     {
       name: "My Watchlist",
       endpoint: "/watchlist",
+      icon: <FaEye />,
     },
   ];
 
