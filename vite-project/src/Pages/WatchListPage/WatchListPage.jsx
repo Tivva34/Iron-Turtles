@@ -4,8 +4,8 @@ import { useOutletContext } from "react-router-dom";
 import List from "../../Components/List";
 import ErrorMsg from "../../Components/ErrorMsg";
 
-function WatchListPage(testArr) {
-  const { watchlist, addToWatchlist, removeFromWatchlist } = useOutletContext();
+function WatchListPage() {
+  const { watchlist } = useOutletContext();
   console.log(watchlist);
 
   return (
