@@ -5,7 +5,6 @@ import Logo from "../Logo/Logo";
 
 function MovieCardSmall({ movie, movieid }) {
   const { watchlist, addToWatchlist, removeFromWatchlist } = useOutletContext(); //Outlet används i RootLayout används därför här för att "packa upp" innehållet som kommer med från RootLayout via App.jsx
-  console.log(movie);
 
   const isInWatchlist = (book) => {
     if (watchlist.some((b) => b.id === book.id)) return true;
