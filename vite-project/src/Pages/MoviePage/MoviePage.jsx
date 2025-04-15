@@ -1,12 +1,11 @@
-// import Header from "../../Components/Header";
+
 import "./moviePage.css";
 
 function MoviePage() {
   return (
-    <>
-      {/* <Header /> */}
+    <section className="page-section">
       <h1>MoviePage</h1>
-    </>
+    </section>
   );
 }
 
