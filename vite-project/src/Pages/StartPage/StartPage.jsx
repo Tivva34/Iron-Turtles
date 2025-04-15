@@ -1,7 +1,6 @@
 import React from "react";
 import List from "../../Components/List";
 import "./startPage.css";
-import testMovies from "../../data/testMovies";
 import MovieCarousel from "../../Components/MovieCarousel/MovieCarousel";
 import { useFetch } from "../../Scripts/useFetch";
 
@@ -20,9 +19,6 @@ function StartPage() {
   const url = "https://santosnr6.github.io/Data/favoritemovies.json";
   const { data, isLoading, isError } = useFetch(url);
 
-  const addIdToArr = data.map((obj, index) => ({ ...obj, id: index }));
-  console.log(addIdToArr);
-
   // Hantera laddning och fel
   if (isLoading) {
     return <section>Loading...</section>;
@@ -32,13 +28,15 @@ function StartPage() {
     return <section>Something went wrong!</section>;
   }
 
+  const addIdToArr = data.map((obj, index) => ({ ...obj, id: index }));
+  console.log(addIdToArr);
   // Slumpa ordningen på filmerna om data finns och är en array
   const shuffledMovies = shuffleArray(addIdToArr);
 
   return (
-    <section className="page">
-      <h1>Startpage</h1>
+    <section>
       <MovieCarousel />
+      <h1>The Turtles Recommend</h1>
       {addIdToArr && <List arr={shuffledMovies} />}
     </section>
   );
