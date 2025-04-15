@@ -75,7 +75,7 @@ span {
 }
 
 .errorpage__button {
-  padding:1rem;
+  padding: 1rem;
   border-radius: 10px;
   border: 2px solid var(--white);
   background-color: #240745;
@@ -99,4 +99,16 @@ span {
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem;
+}
+
+.footer__some-icon {
+  font-size: 3rem;
+  color: var(--white);
 }
