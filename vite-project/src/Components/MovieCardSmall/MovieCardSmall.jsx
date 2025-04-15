@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import Button from "../Button";
+import Button from "../../components/Button";
 import { useOutletContext } from "react-router-dom";
+import Logo from "../Logo/Logo";
 
 function MovieCardSmall({ movie }) {
 	const { watchlist, addToWatchlist, removeFromWatchlist } = useOutletContext();

@@ -1,17 +1,38 @@
-import './searchform.css';
-import MovieSearchInput from '../SearchFunction';
+import "./searchform.css";
+import { useNavigate } from "react-router-dom";
 
 function SearchForm() {
+  const navigate = useNavigate();
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const userInput = event.target.userInput.value;
+    navigate(`/search/${encodeURIComponent(userInput)}`);
+  };
+
   return (
-   <MovieSearchInput />
+    <form onSubmit={handleSearch} className="search__form">
+      <input type="text" name={"userInput"} className="search__input" placeholder="Vad letar du efter?" />
+      <i className="fa-solid fa-magnifying-glass"></i>
+    </form>
   );
 }
 
 export default SearchForm;
 
+// Originalkod
+// function SearchForm() {
+//   return (
+//    <MovieSearchInput />
+//   );
+// }
 
-{/* <div className="searchbar">
+// export default SearchForm;
+
+{
+  /* <div className="searchbar">
 <input type="text" placeholder="Search..." className="searchbar__input"  />
 <i className="fa-solid fa-magnifying-glass"></i>
 
-</div> */}
+</div> */
+}
