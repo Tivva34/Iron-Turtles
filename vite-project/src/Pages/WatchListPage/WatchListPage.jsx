@@ -9,7 +9,7 @@ function WatchListPage() {
   console.log(watchlist);
 
   return (
-    <section>
+    <section className="watchlist-section">
       <h1>WatchListPage</h1>
       {watchlist.length > 0 ? (
         <List arr={watchlist} />
