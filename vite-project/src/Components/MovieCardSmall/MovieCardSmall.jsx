@@ -26,12 +26,17 @@ function MovieCardSmall({ movie, movieid }) {
         {isInWatchlist(movie) ? (
           <Button
             id={"smallCardBtn"}
-            className={"lite-item__button"}
+            className={"errorpage__button lite-item__button"}
             onClickFunction={() => removeFromWatchlist(movie.id)}
             btntext={"Remove"}
           />
         ) : (
-          <Button id={"smallCardBtn"} className={"lite-item__button"} onClickFunction={() => addToWatchlist(movie)} btntext={"Save"} />
+          <Button
+            id={"smallCardBtn"}
+            className={"errorpage__button lite-item__button"}
+            onClickFunction={() => addToWatchlist(movie)}
+            btntext={"Save"}
+          />
         )}
       </div>
     </>

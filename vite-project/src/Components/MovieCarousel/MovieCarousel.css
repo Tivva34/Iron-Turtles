@@ -1,5 +1,6 @@
 .swiper {
     width: 990px;
+  margin-top: 2rem;
 }
 
 .CarouselScreen {
@@ -7,6 +8,7 @@
     height: 456px;
     border: none;
     box-shadow: 10px 5px 5px;
+    
 }
 
 .swiper-button-prev,
@@ -15,3 +17,4 @@
     color: var(--orange);
     border: 1px var(--black);
 }
+

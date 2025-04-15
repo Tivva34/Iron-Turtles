@@ -34,11 +34,11 @@ function StartPage() {
   const shuffledMovies = shuffleArray(addIdToArr);
 
   return (
-    <section>
-      <MovieCarousel />
+    <><MovieCarousel className="Carousel" />
+    <section className="page-section">
       <h1>The Turtles Recommend</h1>
       {addIdToArr && <List arr={shuffledMovies} />}
-    </section>
+    </section></>
   );
 }
 

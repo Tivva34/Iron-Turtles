@@ -2,11 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
 
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+main{
+  background: linear-gradient(to bottom, #6100d1, #000000);
+}
 :root {
   --white: #f0e7e2;
   --black: #050116;
@@ -26,12 +30,15 @@
 }
 
 h1 {
+  text-align: center;
+  color: var(--white);
   font: var(--font-baloo-h1);
 }
 h2 {
   font: var(--font-baloo-h2);
 }
 h3 {
+  color: var(--white);
   font: var(--font-inter-h3);
 }
 h4 {
@@ -49,6 +56,7 @@ span {
 
 .app {
   background-color: var(--dark-grey);
+  position: relative;
 }
 
 @keyframes wag {
@@ -81,7 +89,7 @@ span {
   background-color: #240745;
   color: var(--white);
   font: var(--font-baloo-h1);
-  margin-bottom: 15rem;
+  
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
@@ -94,7 +102,7 @@ span {
 }
 .header {
   width: 100%;
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,6 +110,7 @@ span {
 }
 
 .footer {
+  margin-top: auto;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -112,3 +121,46 @@ span {
   font-size: 3rem;
   color: var(--white);
 }
+
+.page-section{
+  margin-top: 2rem;
+  align-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  
+}
+
+.list{
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  list-style: none;
+  justify-content: center;
+}
+
+.list-item__img{
+  max-height: 400px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.list-item__div{
+ text-align: center;
+ 
+ 
+}
+
+.errorpage__button , #smallCardBtn{
+  font-size: 1rem;
+  padding: .2rem .7rem;
+}
+
+
+.list-item__title{
+  margin: 0.7rem 0 .5rem;
+ 
+}
+
+/* section.trailer{
+  margin: 1rem;
+} */
