@@ -10,12 +10,14 @@ function WatchListPage() {
 
   return (
     <section className="watchlist-section">
-      <h1>WatchListPage</h1>
-      {watchlist.length > 0 ? (
-        <List arr={watchlist} />
-      ) : (
-        <ErrorMsg title={"This is not a great list. In fact, it's not even a list."} text={"Let's fill it up!"} />
-      )}
+      <section className="watchlist-section__text">
+        <h1>WatchListPage</h1>
+        {watchlist.length > 0 ? (
+          <List arr={watchlist} />
+        ) : (
+          <ErrorMsg title={"This is not a great list. In fact, it's not even a list."} text={"Let's fill it up!"} />
+        )}
+      </section>
     </section>
   );
 }
