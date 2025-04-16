@@ -22,6 +22,7 @@ function App() {
 					path: "/search/:searchprase",
 					element: <SearchPage />,
 				},
+				
 				{ path: "/watchlist", element: <WatchListPage /> },
 			],
 		},
