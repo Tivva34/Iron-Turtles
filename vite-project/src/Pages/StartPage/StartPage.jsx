@@ -28,18 +28,51 @@ function StartPage() {
     return <section>Something went wrong!</section>;
   }
 
-  const addIdToArr = data.map((obj, index) => ({ ...obj, id: index }));
+  const addIdToArr = data.map((obj, index) => ({ ...obj, imdbID: index }));
 
   // Slumpa ordningen på filmerna om data finns och är en array
   const shuffledMovies = shuffleArray(addIdToArr);
 
   return (
-    <><MovieCarousel className="Carousel" />
-    <section className="page-section">
-      <h1>The Turtles Recommend</h1>
-      {addIdToArr && <List arr={shuffledMovies} />}
-    </section></>
+    <>
+      <MovieCarousel className="Carousel" />
+      <section className="page-section">
+        <h1>The Turtles Recommend</h1>
+        {addIdToArr && <List arr={shuffledMovies} />}
+      </section>
+    </>
   );
 }
 
 export default StartPage;
+
+// Original
+
+// function StartPage() {
+//   const url = "https://santosnr6.github.io/Data/favoritemovies.json";
+//   const { data, isLoading, isError } = useFetch(url);
+
+//   // Hantera laddning och fel
+//   if (isLoading) {
+//     return <section>Loading...</section>;
+//   }
+
+//   if (isError) {
+//     return <section>Something went wrong!</section>;
+//   }
+
+//   const addIdToArr = data.map((obj, index) => ({ ...obj, id: index }));
+
+//   // Slumpa ordningen på filmerna om data finns och är en array
+//   const shuffledMovies = shuffleArray(addIdToArr);
+
+//   return (
+//     <><MovieCarousel className="Carousel" />
+//     <section className="page-section">
+//       <h1>The Turtles Recommend</h1>
+//       {addIdToArr && <List arr={shuffledMovies} />}
+//     </section></>
+//   );
+// }
+
+// export default StartPage;
