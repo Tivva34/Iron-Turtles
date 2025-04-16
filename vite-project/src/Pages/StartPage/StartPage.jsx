@@ -1,8 +1,9 @@
-import React from "react";
 import List from "../../Components/List";
 import "./startPage.css";
 import MovieCarousel from "../../Components/MovieCarousel/MovieCarousel";
 import { useFetch } from "../../Scripts/useFetch";
+import { useState } from "react";
+import axios from "axios";
 
 //  "Fisher-Yates shuffle-algorit" funktion för att slumpa ordningen på arrayen
 const shuffleArray = (array) => {
@@ -19,7 +20,7 @@ function StartPage() {
   const url = "https://santosnr6.github.io/Data/favoritemovies.json";
   const { data, isLoading, isError } = useFetch(url);
   // console.log(data);
-
+  const [convertedData, setConvertedData] = useState([]);
   // Hantera laddning och fel
   if (isLoading) {
     return <section>Loading...</section>;
@@ -28,12 +29,11 @@ function StartPage() {
   if (isError) {
     return <section>Something went wrong!</section>;
   }
-  // const convertListToOmdb = data.map((obj, omdbSearchObj)=>{{...obj, hej: omdbSearchObj}})
 
-  const addIdToArr = data.map((obj, index) => ({ ...obj, imdbID: index }));
+  // const addIdToArr = data.map((obj, index) => ({ ...obj, imdbID: index }));
 
   // Slumpa ordningen på filmerna om data finns och är en array
-  const shuffledMovies = shuffleArray(addIdToArr);
+  const shuffledMovies = shuffleArray(data);
   // console.log(shuffledMovies);
 
   return (
@@ -41,41 +41,10 @@ function StartPage() {
       <MovieCarousel />
       <section className="page-section">
         <h1>The Turtles Recommend</h1>
-        {addIdToArr && <List arr={shuffledMovies} />}
+        {data && <List arr={shuffledMovies} />}
       </section>
     </section>
   );
 }
 
 export default StartPage;
-
-// Original
-
-// function StartPage() {
-//   const url = "https://santosnr6.github.io/Data/favoritemovies.json";
-//   const { data, isLoading, isError } = useFetch(url);
-
-//   // Hantera laddning och fel
-//   if (isLoading) {
-//     return <section>Loading...</section>;
-//   }
-
-//   if (isError) {
-//     return <section>Something went wrong!</section>;
-//   }
-
-//   const addIdToArr = data.map((obj, index) => ({ ...obj, id: index }));
-
-//   // Slumpa ordningen på filmerna om data finns och är en array
-//   const shuffledMovies = shuffleArray(addIdToArr);
-
-//   return (
-//     <><MovieCarousel className="Carousel" />
-//     <section className="page-section">
-//       <h1>The Turtles Recommend</h1>
-//       {addIdToArr && <List arr={shuffledMovies} />}
-//     </section></>
-//   );
-// }
-
-// export default StartPage;
