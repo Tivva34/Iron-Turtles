@@ -7,7 +7,7 @@ function ErrorMsg({ title, text }) {
     <section>
       <h1>{title}</h1>
       <p>{text}</p>
-      <Link className="errorpage__button " to="/">
+      <Link className="page__button " to="/">
         Back to start
       </Link>
     </section>
