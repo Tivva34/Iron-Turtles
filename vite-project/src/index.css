@@ -186,7 +186,7 @@ ul.nav__list{
 .list-item__img {
   width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
   display: block;

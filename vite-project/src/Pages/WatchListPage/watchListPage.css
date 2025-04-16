@@ -1,14 +1,14 @@
 .watchlist-section {
   display: flex;
   justify-content: center;
-  align-items: center; /* Justera för att texten ska centreras vertikalt */
+  align-items: flex-start;
   padding: 2rem;
 }
 
 .watchlist-section__text {
   text-align: center;
-  max-width: 800px;
-  margin: 5rem; /* Sätt ett top-marginal för att justera avståndet */
+  max-width: 100%;
+  margin: 5rem;
 }
 
 .watchlist-section__text h1 {
