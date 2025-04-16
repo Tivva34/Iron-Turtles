@@ -11,11 +11,11 @@ function App() {
     {
       path: "/",
       element: <RootLayout />, // Alla barn till den här komponenten får med sig innehållet i RootLayout, d.v.s. watchlist,addToWatchlist och removeFromWatchlist samt header och footer.
-      // errorElement: <ErrorPage />,
+      errorElement: <ErrorPage />,
       children: [
-        { path: "/", element: <StartPage />, errorElement: <ErrorPage /> },
+        { path: "/", element: <StartPage /> },
         {
-          path: "/movie/:id",
+          path: "/movie/:imdbID",
           element: <MoviePage />,
         },
         {

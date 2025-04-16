@@ -1,6 +1,5 @@
 import "./searchPage.css";
 import { useParams } from "react-router-dom";
-import { useFetchOMDB } from "../../Scripts/useFetchOMDB";
 import { useFetch } from "../../Scripts/useFetch";
 import List from "../../Components/List";
 

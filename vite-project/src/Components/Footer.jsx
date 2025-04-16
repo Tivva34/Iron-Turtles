@@ -1,10 +1,15 @@
-import { LuYoutube, LuInstagram } from "react-icons/lu";
-
 function Footer() {
   return (
     <footer className="page footer">
-      <LuYoutube className="footer__some-icon" />
-      <LuInstagram className="footer__some-icon" />
+      <a href="#">
+        <img src="src/assets/snapchat.svg" alt="Snapchat" />
+      </a>
+      <a href="#">
+        <img src="src/assets/youtube.svg" alt="Youtube" />
+      </a>
+      <a href="#">
+        <img src="src/assets/pokemon.svg" alt="Pokemon" />
+      </a>
     </footer>
   );
 }

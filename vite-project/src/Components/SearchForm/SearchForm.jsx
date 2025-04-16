@@ -13,7 +13,9 @@ function SearchForm() {
   return (
     <form onSubmit={handleSearch} className="search__form">
       <input type="text" name={"userInput"} className="search__input" placeholder="Vad letar du efter?" />
-      <i className="fa-solid fa-magnifying-glass"></i>
+      <button className="search__submit-button">
+        <i className="fa-solid fa-magnifying-glass"></i>
+      </button>
     </form>
   );
 }

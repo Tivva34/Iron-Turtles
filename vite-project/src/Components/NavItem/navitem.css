@@ -5,10 +5,10 @@
   .nav__link {
     color: var(--white);
     text-decoration: none;
+    display: flex;
   }
 }
 
 .nav__item:hover {
-  color: #fa7e05;
-  text-decoration: underline;
+  text-decoration: underline var(--orange);
 }

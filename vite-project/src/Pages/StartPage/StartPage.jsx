@@ -18,7 +18,7 @@ const shuffleArray = (array) => {
 function StartPage() {
   const url = "https://santosnr6.github.io/Data/favoritemovies.json";
   const { data, isLoading, isError } = useFetch(url);
-  console.log(data);
+  // console.log(data);
 
   // Hantera laddning och fel
   if (isLoading) {
@@ -28,31 +28,22 @@ function StartPage() {
   if (isError) {
     return <section>Something went wrong!</section>;
   }
+  // const convertListToOmdb = data.map((obj, omdbSearchObj)=>{{...obj, hej: omdbSearchObj}})
 
   const addIdToArr = data.map((obj, index) => ({ ...obj, imdbID: index }));
 
   // Slumpa ordningen på filmerna om data finns och är en array
   const shuffledMovies = shuffleArray(addIdToArr);
-  console.log(shuffledMovies);
+  // console.log(shuffledMovies);
 
   return (
-<<<<<<< HEAD
-    <>
-      <MovieCarousel className="Carousel" />
+    <section className="carousel">
+      <MovieCarousel />
       <section className="page-section">
         <h1>The Turtles Recommend</h1>
         {addIdToArr && <List arr={shuffledMovies} />}
       </section>
-    </>
-=======
-    <section className="carousel">
-      <MovieCarousel  />
-    <section className="page-section">
-      <h1>The Turtles Recommend</h1>
-      {addIdToArr && <List arr={shuffledMovies} />}
     </section>
-    </section>
->>>>>>> dev
   );
 }
 
