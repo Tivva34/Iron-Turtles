@@ -1,24 +1,24 @@
 import { useState, useEffect } from "react";
 
 export const useLocalStorageWatchlist = () => {
-  const [watchlist, setWatchlist] = useState(() => {
-    const stored = localStorage.getItem("watchlist");
-    return JSON.parse(stored) || [];
-  });
+	const [watchlist, setWatchlist] = useState(() => {
+		const stored = localStorage.getItem("watchlist");
+		return JSON.parse(stored) || [];
+	});
 
-  useEffect(() => {
-    localStorage.setItem("watchlist", JSON.stringify(watchlist));
-  }, [watchlist]);
+	useEffect(() => {
+		localStorage.setItem("watchlist", JSON.stringify(watchlist));
+	}, [watchlist]);
 
-  const addToWatchlist = (movie) => {
-    setWatchlist((prev) => [...prev, movie]);
-  };
+	const addToWatchlist = (movie) => {
+		setWatchlist((prev) => [...prev, movie]);
+	};
 
-  const removeFromWatchlist = (id) => {
-    console.log(id);
+	const removeFromWatchlist = (id) => {
+		console.log(id);
 
-    setWatchlist((prev) => prev.filter((b) => b.id !== id));
-  };
+		setWatchlist((prev) => prev.filter((b) => b.id !== id));
+	};
 
-  return { watchlist, addToWatchlist, removeFromWatchlist };
+	return { watchlist, addToWatchlist, removeFromWatchlist };
 };

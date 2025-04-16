@@ -7,31 +7,31 @@ import StartPage from "./Pages/StartPage/StartPage";
 import WatchListPage from "./Pages/WatchListPage/WatchListPage";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <RootLayout />, // Alla barn till den här komponenten får med sig innehållet i RootLayout, d.v.s. watchlist,addToWatchlist och removeFromWatchlist samt header och footer.
-      errorElement: <ErrorPage />,
-      children: [
-        { path: "/", element: <StartPage />, errorElement: <ErrorPage /> },
-        {
-          path: "/movie/:id",
-          element: <MoviePage />,
-        },
-        {
-          path: "/search/:searchprase",
-          element: <SearchPage />,
-        },
-        { path: "/watchlist", element: <WatchListPage /> },
-      ],
-    },
-  ]);
+	const router = createBrowserRouter([
+		{
+			path: "/",
+			element: <RootLayout />, // Alla barn till den här komponenten får med sig innehållet i RootLayout, d.v.s. watchlist,addToWatchlist och removeFromWatchlist samt header och footer.
+			errorElement: <ErrorPage />,
+			children: [
+				{ path: "/", element: <StartPage />, errorElement: <ErrorPage /> },
+				{
+					path: "/movie/:imdbID",
+					element: <MoviePage />,
+				},
+				{
+					path: "/search/:searchprase",
+					element: <SearchPage />,
+				},
+				{ path: "/watchlist", element: <WatchListPage /> },
+			],
+		},
+	]);
 
-  return (
-    <div className="app">
-      <RouterProvider router={router} />
-    </div>
-  );
+	return (
+		<div className="app">
+			<RouterProvider router={router} />
+		</div>
+	);
 }
 
 export default App;
