@@ -8,7 +8,7 @@
 }
 
 main {
-  background: linear-gradient(to bottom, #6100d1, #000000);
+  /* background: linear-gradient(to bottom, #6100d1, #000000); */
 }
 :root {
   --white: #f0e7e2;
@@ -55,6 +55,7 @@ span {
 
 .app {
   /* background-color: var(--dark-grey); */
+  background: linear-gradient(to bottom, #6100d1, #000000);
   position: relative;
 }
 
@@ -111,15 +112,16 @@ span {
 }
 
 .footer {
+  background-color: var(--dark-grey);
   margin-top: auto;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  padding: 4rem;
+  gap: 1.5rem;
+  padding: 3rem;
 }
 
 .footer__some-icon {
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--white);
 }
 
