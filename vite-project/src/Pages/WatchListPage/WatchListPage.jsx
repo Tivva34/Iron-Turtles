@@ -5,8 +5,8 @@ import List from "../../Components/List";
 import ErrorMsg from "../../Components/ErrorMsg";
 
 function WatchListPage() {
-  const { watchlist } = useOutletContext();
-  console.log(watchlist);
+	const { watchlist } = useOutletContext();
+	console.log(watchlist);
 
   return (
     <section className="watchlist-section">
@@ -20,6 +20,7 @@ function WatchListPage() {
       </section>
     </section>
   );
+
 }
 
 export default WatchListPage;
