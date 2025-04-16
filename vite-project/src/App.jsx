@@ -19,7 +19,7 @@ function App() {
           element: <MoviePage />,
         },
         {
-          path: "/search",
+          path: "/search/:searchprase",
           element: <SearchPage />,
         },
         { path: "/watchlist", element: <WatchListPage /> },
