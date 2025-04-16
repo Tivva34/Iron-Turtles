@@ -1,5 +1,8 @@
 .watchlist-section {
-    height: 100vh;
-   
-   
-  }
+  padding-top: 1rem; /* creates actual space regardless of overlaps */
+}
+
+/* .watchlist-section__text {
+  
+} */
+

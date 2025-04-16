@@ -36,6 +36,7 @@ function StartPage() {
   console.log(shuffledMovies);
 
   return (
+<<<<<<< HEAD
     <>
       <MovieCarousel className="Carousel" />
       <section className="page-section">
@@ -43,6 +44,15 @@ function StartPage() {
         {addIdToArr && <List arr={shuffledMovies} />}
       </section>
     </>
+=======
+    <section className="carousel">
+      <MovieCarousel  />
+    <section className="page-section">
+      <h1>The Turtles Recommend</h1>
+      {addIdToArr && <List arr={shuffledMovies} />}
+    </section>
+    </section>
+>>>>>>> dev
   );
 }
 
