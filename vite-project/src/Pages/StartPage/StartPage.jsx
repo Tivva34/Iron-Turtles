@@ -18,6 +18,7 @@ const shuffleArray = (array) => {
 function StartPage() {
   const url = "https://santosnr6.github.io/Data/favoritemovies.json";
   const { data, isLoading, isError } = useFetch(url);
+  console.log(data);
 
   // Hantera laddning och fel
   if (isLoading) {
@@ -32,6 +33,7 @@ function StartPage() {
 
   // Slumpa ordningen på filmerna om data finns och är en array
   const shuffledMovies = shuffleArray(addIdToArr);
+  console.log(shuffledMovies);
 
   return (
     <>

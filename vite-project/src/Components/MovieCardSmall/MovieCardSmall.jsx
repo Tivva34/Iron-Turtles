@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 import { useOutletContext } from "react-router-dom";
 import Logo from "../Logo/Logo";
 
-function MovieCardSmall({ movie, movieid }) {
+function MovieCardSmall({ movie }) {
   const { watchlist, addToWatchlist, removeFromWatchlist } = useOutletContext(); //Outlet används i RootLayout används därför här för att "packa upp" innehållet som kommer med från RootLayout via App.jsx
 
   const isInWatchlist = (movie) => {

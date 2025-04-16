@@ -1,6 +1,7 @@
 import "./searchPage.css";
 import { useParams } from "react-router-dom";
 import { useFetchOMDB } from "../../Scripts/useFetchOMDB";
+import { useFetch } from "../../Scripts/useFetch";
 import List from "../../Components/List";
 
 function SearchPage() {
@@ -10,7 +11,7 @@ function SearchPage() {
   const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchprase.searchprase)}`; // encodeURIComponent kodar om en sträng till att blir säker för att använda i en url. Tar bort mellanslag, kolon etc.
   // const url = `http://www.omdbapi.com/?apikey=27b02bae&s=harry%20potter`;
 
-  const { data, isLoading, isError } = useFetchOMDB(url);
+  const { data, isLoading, isError } = useFetch(url);
 
   // Hantera laddning och fel
   if (isLoading) {
