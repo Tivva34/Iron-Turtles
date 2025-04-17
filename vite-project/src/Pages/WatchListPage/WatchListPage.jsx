@@ -1,5 +1,4 @@
 import React from "react";
-import "./watchListPage.css";
 import { useOutletContext } from "react-router-dom";
 import List from "../../Components/List";
 import ErrorMsg from "../../Components/ErrorMsg";

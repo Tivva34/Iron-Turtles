@@ -1,5 +1,4 @@
 import List from "../../Components/List";
-import "./startPage.css";
 import MovieCarousel from "../../Components/MovieCarousel/MovieCarousel";
 import { useFetch } from "../../Scripts/useFetch";
 import ErrorMsg from "../../Components/ErrorMsg";

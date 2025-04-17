@@ -6,7 +6,6 @@ import { useFetchMovieCard } from "../../Scripts/useFetchMovieCard";
 import { BsTicketPerforatedFill } from "react-icons/bs";
 import { FaFilm, FaCalendarAlt } from "react-icons/fa";
 import "./moviePage.css";
-// import ErrorMsg from "../../Components/ErrorMsg";
 
 function MoviePage() {
   const { imdbID } = useParams(); // Hämtar imdbID från URL:n
@@ -49,22 +48,6 @@ function MoviePage() {
     const numericRating = Rated?.match(/\d+(\.\d+)?/); // Matcha siffror med eller utan decimaler
     return numericRating ? numericRating[0] : "N/A"; // Returnera siffrorna eller "N/A" om inga siffror hittas
   };
-
-  // if (isLoading) {
-  // //   <ErrorMsg
-  // //     gifsrc={"https://discord.com/channels/@me/1353988068419567638/1362371560773648585"}
-  // //     alttext={"Gif with turtle"}
-  // //     specifierClass={"error-gif--flip-horizontal"}
-  // //   />;
-  //  return <section>Loading...</section>;
-  //  }
-
-  //  if (isError) {
-  // //   <ErrorMsg
-  // //     gifsrc={"https://discord.com/channels/@me/1353988068419567638/1362371560773648585"}
-  // //     alttext={"Gif with turtle"}
-  // //     specifierClass={"error-gif--flip-horizontal"}
-  // //   />; }
 
   // Visa "loading" medan vi väntar på data
   if (isLoading || !movie) {

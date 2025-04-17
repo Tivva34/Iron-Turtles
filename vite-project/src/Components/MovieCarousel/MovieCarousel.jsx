@@ -46,7 +46,6 @@ function MovieCarousel() {
     }
   }, [randomMovies, swiperInstance]);
 
-  // Laddning eller felmeddelanden
   // Hantera laddning och fel
   if (isLoading) {
     <ErrorMsg
@@ -54,7 +53,7 @@ function MovieCarousel() {
       alttext={"Gif with turtle"}
       specifierClass={"error-gif--flip-horizontal"}
     />;
-    // return <section>Loading...</section>;
+   
   }
 
   if (isError) {
@@ -64,14 +63,7 @@ function MovieCarousel() {
       specifierClass={"error-gif--flip-horizontal"}
     />;
   }
-  // if (isLoading) {
-  //   return <section>Loading...</section>;
-  // }
-
-  // if (isError) {
-  //   return <section>Something went wrong!</section>;
-  // }
-
+ 
   // Rendera Swiper slides med slumpade trailers
   return (
     <section className="swiper">
