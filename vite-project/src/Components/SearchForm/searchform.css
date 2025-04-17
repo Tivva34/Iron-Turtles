@@ -1,4 +1,6 @@
 .search__form {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--white);
   padding: 0 10px;
   border: none;
@@ -8,7 +10,7 @@
 
 .search__input {
   padding: 10px;
-  width: 250px;
+  /* width: 250px; */
   border: none;
   background-color: var(--white);
 }

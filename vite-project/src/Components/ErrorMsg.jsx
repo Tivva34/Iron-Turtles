@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ErrorMsg({ title, text }) {
+function ErrorMsg({ gifsrc, alttext, specifierClass }) {
   return (
-    <section>
-      <h1>{title}</h1>
-      <p>{text}</p>
+    <section className="page-section page-section--center">
+      <img src={gifsrc} alt={alttext} className={`error-gif ${specifierClass}`} />
+
       <Link className="page__button page__button--big " to="/">
         Back to start
       </Link>
