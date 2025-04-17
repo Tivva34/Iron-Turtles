@@ -1,8 +1,24 @@
 .watchlist-section {
-  padding-top: 1rem; /* creates actual space regardless of overlaps */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
 }
 
-/* .watchlist-section__text {
-  
-} */
+.watchlist-section__text {
+  text-align: center;
+  max-width: 100%;
+  margin: 5rem;
+}
 
+.watchlist-section__text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--purple);
+}
+
+p{
+  font-size: 1.5rem;
+  margin: 2rem;
+  color: var(--white);
+}
