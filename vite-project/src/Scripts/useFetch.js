@@ -9,16 +9,11 @@ export const useFetch = (url) => {
 
   useEffect(() => {
     setIsLoading(true);
-
-    // setTimeout(() => {
     axios
       .get(url)
       .then((response) => (response.data.Search ? setData([...response.data.Search]) : setData([...response.data])))
       .catch((error) => setIsError(true))
       .finally(() => setIsLoading(false));
-
-    //   setInterval(3000);
-    // }, 3000);
   }, [url]);
 
   return { data, isLoading, isError };
