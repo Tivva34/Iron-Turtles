@@ -34,7 +34,6 @@ function StartPage() {
 
   // Slumpa ordningen på filmerna om data finns och är en array
   const shuffledMovies = shuffleArray(data);
-  // console.log(shuffledMovies);
 
   return (
     <section className="carousel">

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useFetch } from "../../Scripts/useFetch";
 import Button from "../../components/Button";
 import { useOutletContext } from "react-router-dom";
 import { useFetchMovieCard } from "../../Scripts/useFetchMovieCard";

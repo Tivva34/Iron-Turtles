@@ -16,7 +16,6 @@ export const useLocalStorageWatchlist = () => {
 
   const removeFromWatchlist = (imdbID) => {
     console.log(imdbID);
-
     setWatchlist((prev) => prev.filter((b) => b.imdbID !== imdbID));
   };
 
