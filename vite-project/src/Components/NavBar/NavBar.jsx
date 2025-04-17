@@ -1,4 +1,5 @@
-import { FaHome, FaEye } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+import { GiTurtleShell } from "react-icons/gi";
 import NavItem from "../NavItem/NavItem";
 import "./navbar.css";
 
@@ -8,7 +9,7 @@ function NavBar() {
 
       name: "Home",
       endpoint: "/",
-      icon: <FaHome />,
+      icon: <GiTurtleShell />,
     },
     {
       name: "My Watchlist",

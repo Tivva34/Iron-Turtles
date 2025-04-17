@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useFetch } from "../../Scripts/useFetch";
 import Button from "../../components/Button";
 import { useOutletContext } from "react-router-dom";
+import { BsTicketPerforatedFill } from "react-icons/bs";
+import { FaFilm, FaCalendarAlt } from "react-icons/fa";
 import "./moviePage.css";
 
 function MoviePage() {
@@ -46,6 +48,11 @@ function MoviePage() {
 		}
 	};
 
+  const getNumericRating = (Rated) => {
+    const numericRating = Rated?.match(/\d+(\.\d+)?/); // Matcha siffror med eller utan decimaler
+    return numericRating ? numericRating[0] : "N/A"; // Returnera siffrorna eller "N/A" om inga siffror hittas
+  };
+
 	// Visa "loading" medan vi väntar på data
 	if (isLoading || !movie) {
 		return <p className="loading-text">Loading...</p>;
@@ -65,41 +72,58 @@ function MoviePage() {
 			<div className="movie-header">
 				<img src={movie?.Poster} alt={movie?.Title} className="movie-poster" />
 				<div className="movie-details">
-					<h1 className="movie-title">
+					<h1 className="movie-title movie-title__small">
 						{movie?.Title} ({movie?.Year})
 					</h1>
-					<p>
-						<strong>Rated:</strong> {movie?.Rated}
+          <article className="movie-desc">
+            <aside className="movie-info movie-info__small">
+            <div className="movie-rating">
+              <i className="movie-icon">
+            <BsTicketPerforatedFill />
+              </i>
+            <p> {getNumericRating(movie?.Rated)} </p>
+            </div>
+            <div className="movie-year">
+            <i className="movie-icon">
+            <FaCalendarAlt />
+            </i>
+            <p> {movie?.Released} </p>
+            </div>
+					<div className="movie-genre">
+          <i className="movie-icon">
+            <FaFilm />
+          </i>
+          <p> {movie?.Genre} </p>
+          </div>
+          </aside>           
+            <p>
+						 {movie?.Plot}
 					</p>
-					<p>
-						<strong>Released:</strong> {movie?.Released}
-					</p>
-					<p>
-						<strong>Genre:</strong> {movie?.Genre}
-					</p>
+          <aside className="movie__extra-info">
 					<p>
 						<strong>Director:</strong> {movie?.Director}
 					</p>
 					<p>
 						<strong>Actors:</strong> {movie?.Actors}
 					</p>
-					<p>
-						<strong>Plot:</strong> {movie?.Plot}
-					</p>
+					
 					<p>
 						<strong>Language:</strong> {movie?.Language}
 					</p>
 					<p>
 						<strong>Awards:</strong> {movie?.Awards}
 					</p>
-
+          </aside>
+          </article>
+          <aside className="movie-card__button">
+        
 					{/* Knapp för att spara i Watchlist */}
 					{isInWatchlist(movie) ? (
 						<Button
 							id={"smallCardBtn"}
 							className={"errorpage__button lite-item__button"}
 							onClickFunction={() => removeFromWatchlist(movie.imdbID)}
-							btntext={"Remove"}
+              btntext={"Remove"}
 						/>
 					) : (
 						<Button
@@ -117,6 +141,7 @@ function MoviePage() {
 						onClickFunction={handleBackToHome}
 						btntext="Back to Home"
 					/>
+          </aside>
 				</div>
 			</div>
 		</div>
