@@ -1,42 +1,23 @@
 .swiper {
-<<<<<<< HEAD
-  width: 990px;
-=======
-    width: 100%;
-    max-width: 990px;
-    margin: 0 auto;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 .swiper-slide {
-    padding: 0;
-    margin: 0;
->>>>>>> dev
+  padding: 0;
+  margin: 0;
 }
 .CarouselScreen {
-<<<<<<< HEAD
   width: 100%;
-  height: 456px;
-  border: 5px solid black; /* la till border ist för shadow för att testa */
-  border-radius: 2rem; /* Kanske snyggare utan, ni får välja */
-  /* box-shadow: 10px 5px 5px; */
-=======
-    width: 100%;
-    aspect-ratio: 16 / 9; 
-    border: 5px solid black;
-    border-radius: 2rem;
-    display: block;
->>>>>>> dev
+  aspect-ratio: 16 / 9;
+  border: 5px solid black;
+  border-radius: 2rem;
+  display: block;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-<<<<<<< HEAD
-  --swiper-navigation-size: 60px;
-
-  color: var(--orange);
-  border: 1px var(--black);
-}
-=======
   --swiper-navigation-size: 60px; /* ändrar knapp storlek */
   width: 60px; /* ändrar Klickbar knapp location*/
   height: 60px;
@@ -50,6 +31,4 @@
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   transform: scale(1.1);
- 
 }
->>>>>>> dev
