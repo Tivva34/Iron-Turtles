@@ -23,17 +23,12 @@ function MovieCardSmall({ movie }) {
         {isInWatchlist(movie) ? (
           <Button
             id={"smallCardBtn"}
-            className={"errorpage__button lite-item__button"}
+            className={"list-item__button"}
             onClickFunction={() => removeFromWatchlist(movie.imdbID)}
             btntext={"Remove"}
           />
         ) : (
-          <Button
-            id={"smallCardBtn"}
-            className={"errorpage__button lite-item__button"}
-            onClickFunction={() => addToWatchlist(movie)}
-            btntext={"Save"}
-          />
+          <Button id={"smallCardBtn"} className={"list-item__button"} onClickFunction={() => addToWatchlist(movie)} btntext={"Save"} />
         )}
       </div>
     </>
@@ -70,14 +65,14 @@ export default MovieCardSmall;
 //         {isInWatchlist(movie) ? (
 //           <Button
 //             id={"smallCardBtn"}
-//             className={"page__button lite-item__button"}
+//             className={"page__button list-item__button"}
 //             onClickFunction={() => removeFromWatchlist(movie.imdbID)}
 //             btntext={"Remove"}
 //           />
 //         ) : (
 //           <Button
 //             id={"smallCardBtn"}
-//             className={"page__button lite-item__button"}
+//             className={"page__button list-item__button"}
 //             onClickFunction={() => addToWatchlist(movie)}
 //             btntext={"Save"}
 //           />
@@ -112,14 +107,14 @@ export default MovieCardSmall;
 //         {isInWatchlist(movie) ? (
 //           <Button
 //             id={"smallCardBtn"}
-//             className={"page__button lite-item__button"}
+//             className={"page__button list-item__button"}
 //             onClickFunction={() => removeFromWatchlist(movie.id)}
 //             btntext={"Remove"}
 //           />
 //         ) : (
 //           <Button
 //             id={"smallCardBtn"}
-//             className={"page__button lite-item__button"}
+//             className={"page__button list-item__button"}
 //             onClickFunction={() => addToWatchlist(movie)}
 //             btntext={"Save"}
 //           />

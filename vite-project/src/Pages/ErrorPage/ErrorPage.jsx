@@ -8,7 +8,12 @@ function ErrorPage() {
     <div className="error-container">
       <h1>Oh no! This was not supposed to happen...</h1>
       <img src={TurtleSVG} alt="404 Turtle" className="error__turtle" />
-      <Button id="go-back" className="page__button" onClickFunction={() => window.history.back()} btntext="← Take me back" />
+      <Button
+        id="go-back"
+        className="page__button page__button--big"
+        onClickFunction={() => window.history.back()}
+        btntext="← Take me back"
+      />
     </div>
   );
 }

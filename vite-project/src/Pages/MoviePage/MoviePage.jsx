@@ -89,14 +89,14 @@ function MoviePage() {
           {isInWatchlist(movie) ? (
             <Button
               id={"smallCardBtn"}
-              className={"errorpage__button lite-item__button"}
+              className={"errorpage__button list-item__button"}
               onClickFunction={() => removeFromWatchlist(movie.imdbID)}
               btntext={"Remove"}
             />
           ) : (
             <Button
               id={"smallCardBtn"}
-              className={"errorpage__button lite-item__button"}
+              className={"errorpage__button list-item__button"}
               onClickFunction={() => handleAddToWatchlist(movie)}
               btntext={"Save"}
             />
@@ -105,7 +105,7 @@ function MoviePage() {
           {/* Knapp för att gå tillbaka till startsidan */}
           <Button
             id="backToHome"
-            className="errorpage__button lite-item__button"
+            className="errorpage__button list-item__button"
             onClickFunction={handleBackToHome}
             btntext="Back to Home"
           />
