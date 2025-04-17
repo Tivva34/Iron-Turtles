@@ -12,8 +12,15 @@
   background-color: var(--white);
 }
 
+.search__input::placeholder {
+  font-family: "Inter";
+  color: var(--dark-grey);
+  opacity: 1;
+}
+
 .search__submit-button {
   background-color: var(--white);
   border: none;
   cursor: pointer;
+  padding-left: 1rem;
 }

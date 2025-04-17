@@ -147,6 +147,9 @@ span {
   justify-items: center;
 }
 
+.list-item__img-div {
+}
+
 .list-item__img {
   height: 300px;
   width: 100%;

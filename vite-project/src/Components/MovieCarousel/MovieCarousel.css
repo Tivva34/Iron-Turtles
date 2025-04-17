@@ -1,25 +1,19 @@
 .swiper {
-    width: 990px;
-   
-    
-
+  width: 990px;
 }
 
 .CarouselScreen {
-    width: 100%;
-    height: 456px;
-    border: 5px solid black; /* la till border ist för shadow för att testa */
-    border-radius: 2rem; /* Kanske snyggare utan, ni får välja */
-    /* box-shadow: 10px 5px 5px; */
-
-    
+  width: 100%;
+  height: 456px;
+  border: 5px solid black; /* la till border ist för shadow för att testa */
+  border-radius: 2rem; /* Kanske snyggare utan, ni får välja */
+  /* box-shadow: 10px 5px 5px; */
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-    --swiper-navigation-size: 60px;
-    color: var(--orange);
-    border: 1px var(--black);
+  --swiper-navigation-size: 60px;
+
+  color: var(--orange);
+  border: 1px var(--black);
 }
-
-
