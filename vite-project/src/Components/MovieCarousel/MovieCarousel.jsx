@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./MovieCarousel.css";
 import { useFetch } from "../../Scripts/useFetch";
+import ErrorMsg from "../ErrorMsg";
 
 function MovieCarousel() {
   const url = "https://santosnr6.github.io/Data/favoritemovies.json";
@@ -39,20 +40,37 @@ function MovieCarousel() {
           prevEl: ".swiper-button-prev",
         },
         observer: true,
-      observeParents: true,
+        observeParents: true,
       });
       setSwiperInstance(swiper);
     }
   }, [randomMovies, swiperInstance]);
 
   // Laddning eller felmeddelanden
+  // Hantera laddning och fel
   if (isLoading) {
-    return <section>Loading...</section>;
+    <ErrorMsg
+      gifsrc={"https://discord.com/channels/@me/1353988068419567638/1362371560773648585"}
+      alttext={"Gif with turtle"}
+      specifierClass={"error-gif--flip-horizontal"}
+    />;
+    // return <section>Loading...</section>;
   }
 
   if (isError) {
-    return <section>Something went wrong!</section>;
+    <ErrorMsg
+      gifsrc={"https://discord.com/channels/@me/1353988068419567638/1362371560773648585"}
+      alttext={"Gif with turtle"}
+      specifierClass={"error-gif--flip-horizontal"}
+    />;
   }
+  // if (isLoading) {
+  //   return <section>Loading...</section>;
+  // }
+
+  // if (isError) {
+  //   return <section>Something went wrong!</section>;
+  // }
 
   // Rendera Swiper slides med slumpade trailers
   return (

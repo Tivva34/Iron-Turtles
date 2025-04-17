@@ -23,12 +23,17 @@ function MovieCardSmall({ movie }) {
         {isInWatchlist(movie) ? (
           <Button
             id={"smallCardBtn"}
-            className={"list-item__button"}
+            className={"list-item__button page__button--down"}
             onClickFunction={() => removeFromWatchlist(movie.imdbID)}
             btntext={"Remove"}
           />
         ) : (
-          <Button id={"smallCardBtn"} className={"list-item__button"} onClickFunction={() => addToWatchlist(movie)} btntext={"Save"} />
+          <Button
+            id={"smallCardBtn"}
+            className={"list-item__button page__button--down"}
+            onClickFunction={() => addToWatchlist(movie)}
+            btntext={"Save"}
+          />
         )}
       </div>
     </>

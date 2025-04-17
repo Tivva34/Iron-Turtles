@@ -55,11 +55,25 @@ span {
 }
 
 .app {
-  background: linear-gradient(to bottom, var(--green), var(--black));
+  /* background: linear-gradient(to bottom, var(--green), var(--black)); */
+  background: radial-gradient(circle, var(--black), var(--green));
   position: relative;
   min-height: 100vh;
 }
 
+/* container för header och sidans bredd  */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* Error */
 @keyframes wag {
   0% {
     transform: rotate(-15deg);
@@ -72,21 +86,26 @@ span {
   }
 }
 
-/* container för header och sidans bredd  */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .error__turtle {
   margin: 5rem;
   animation: wag 2s infinite ease-in-out;
   transform-origin: center;
+}
+
+.errorpage__button,
+#smallCardBtn {
+  font-size: 1rem;
+  padding: 0.2rem 0.7rem;
+}
+
+.error-gif {
+  width: 300px;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+}
+
+.error-gif--flip-horizontal {
+  transform: scaleX(-1);
 }
 
 .nav-link {
@@ -98,13 +117,11 @@ span {
   padding: 0.5rem 5rem;
   border-radius: 10px;
   border: 2px solid var(--white);
-
+  text-decoration: none;
+  font: var(--font-inter-h3);
   background: none;
   color: var(--white);
-
   font-size: 1rem;
-  /* padding: 0.2rem 0.7rem; */
-
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
@@ -113,30 +130,51 @@ span {
   padding: 0.75rem 1.5rem;
 }
 
+.page__button--down {
+  position: absolute;
+  bottom: -30px;
+}
+
 .page__button:hover {
   cursor: pointer;
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-}
-.errorpage__button,
-#smallCardBtn {
-  font-size: 1rem;
-  padding: 0.2rem 0.7rem;
 }
 
 /* Header */
 .header {
   width: 100%;
   height: auto;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 2fr;
+  /* display: flex;
+  flex-wrap: nowrap; */
+  /* justify-content: space-between; */
   align-items: center;
   padding: 2.5rem 2rem;
   gap: 1rem;
   overflow: hidden;
   box-sizing: border-box;
 }
+
+.header__link {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.search__form {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.nav {
+  /* display: flex;
+  flex-direction: row; */
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* 
 .header > * {
   flex-shrink: 1;
   min-width: 0;
@@ -144,7 +182,7 @@ span {
 
 .header nav {
   flex-shrink: 1;
-}
+} */
 
 .nav-link {
   text-decoration: none;
@@ -172,7 +210,13 @@ ul.nav__list {
 .page-section {
   margin-top: 2rem;
   align-content: center;
-  font-family: "Segoe UI", sans-serif;
+  /* font-family: "Segoe UI", sans-serif; */
+}
+
+.page-section--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* List */
@@ -181,11 +225,11 @@ ul.nav__list {
   max-width: 1200px;
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.5rem;
-  row-gap: 2.5rem;
+  row-gap: 4rem;
   list-style: none;
-  justify-content: center;
+  /* justify-content: center; */
   padding: 0 1rem;
   justify-items: center;
 }
@@ -200,22 +244,52 @@ ul.nav__list {
 }
 .list-item__div {
   max-width: 200px;
+  position: relative;
 }
 
 .list-item__title {
   margin: 0.7rem 0 0.5rem;
 }
 
-@media (max-width: 927px) {
+@media (max-width: 930px) {
   .header {
-    flex-direction: column;
-    align-items: center;
     gap: 0.5rem;
     padding: 1rem;
   }
 
+  .header__link {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .search__form {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .nav {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+
   .nav__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .movie-header {
     flex-direction: column;
     align-items: center;
+  }
+
+  .movie-card__button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    display: flex;
+    flex-direction: column;
   }
 }

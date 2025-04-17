@@ -2,8 +2,7 @@ import List from "../../Components/List";
 import "./startPage.css";
 import MovieCarousel from "../../Components/MovieCarousel/MovieCarousel";
 import { useFetch } from "../../Scripts/useFetch";
-import { useState } from "react";
-import axios from "axios";
+import ErrorMsg from "../../Components/ErrorMsg";
 
 //  "Fisher-Yates shuffle-algorit" funktion för att slumpa ordningen på arrayen
 const shuffleArray = (array) => {
@@ -19,18 +18,24 @@ const shuffleArray = (array) => {
 function StartPage() {
   const url = "https://santosnr6.github.io/Data/favoritemovies.json";
   const { data, isLoading, isError } = useFetch(url);
-  // console.log(data);
-  const [convertedData, setConvertedData] = useState([]);
+
   // Hantera laddning och fel
   if (isLoading) {
-    return <section>Loading...</section>;
+    <ErrorMsg
+      gifsrc={"https://discord.com/channels/@me/1353988068419567638/1362371560773648585"}
+      alttext={"Gif with turtle"}
+      specifierClass={"error-gif--flip-horizontal"}
+    />;
+    // return <section>Loading...</section>;
   }
 
   if (isError) {
-    return <section>Something went wrong!</section>;
+    <ErrorMsg
+      gifsrc={"https://discord.com/channels/@me/1353988068419567638/1362371560773648585"}
+      alttext={"Gif with turtle"}
+      specifierClass={"error-gif--flip-horizontal"}
+    />;
   }
-
-  // const addIdToArr = data.map((obj, index) => ({ ...obj, imdbID: index }));
 
   // Slumpa ordningen på filmerna om data finns och är en array
   const shuffledMovies = shuffleArray(data);

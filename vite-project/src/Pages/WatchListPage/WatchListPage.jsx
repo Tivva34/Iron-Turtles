@@ -5,22 +5,22 @@ import List from "../../Components/List";
 import ErrorMsg from "../../Components/ErrorMsg";
 
 function WatchListPage() {
-	const { watchlist } = useOutletContext();
-	console.log(watchlist);
+  const { watchlist } = useOutletContext();
+  console.log(watchlist);
 
   return (
-    <section className="watchlist-section">
-      <section className="watchlist-section__text">
-        <h1>WatchListPage</h1>
-        {watchlist.length > 0 ? (
-          <List arr={watchlist} />
-        ) : (
-          <ErrorMsg title={"This is not a great list. In fact, it's not even a list."} text={"Let's fill it up!"} />
-        )}
-      </section>
+    <section className="page-section">
+      <h1>{watchlist.length < 1 ? "So empty... So sad.." : "My Watchlist"}</h1>
+      {watchlist.length > 0 ? (
+        <List arr={watchlist} />
+      ) : (
+        <ErrorMsg
+          gifsrc={"https://img3.wikia.nocookie.net/__cb20130413210255/anime-arts/images/1/1d/Pokemon-gif-omg-noob.gif"}
+          alttext={"Pokemongif"}
+        />
+      )}
     </section>
   );
-
 }
 
 export default WatchListPage;
