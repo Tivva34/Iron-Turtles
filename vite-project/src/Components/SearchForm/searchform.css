@@ -1,5 +1,5 @@
 .search__form {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 0 10px;
   border: none;
   border-radius: 5px;
@@ -8,8 +8,21 @@
 
 .search__input {
   padding: 10px;
-  width: 200px;
+  width: 250px;
   border: none;
-  transition: width 0.3s ease; /* Lägg till transition här också */
+  background-color: var(--white);
 }
 
+.search__input::placeholder {
+  font-family: "Inter";
+  color: var(--dark-grey);
+  opacity: 1;
+}
+
+.search__submit-button {
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+  padding-left: 1rem;
+  transition: width 0.3s ease; /* Lägg till transition här också */
+}

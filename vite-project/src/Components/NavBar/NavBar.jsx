@@ -6,7 +6,6 @@ import "./navbar.css";
 function NavBar() {
   const navItems = [
     {
-
       name: "Home",
       endpoint: "/",
       icon: <GiTurtleShell />,
