@@ -7,13 +7,13 @@ function RootLayout() {
   const { watchlist, addToWatchlist, removeFromWatchlist } = useLocalStorageWatchlist(); // Tar emot och dekonstruerar från en hook som kan uppdatera local storage
 
   return (
-    <>
+    <div className="container">
       <Header />
       <main>
         <Outlet context={{ watchlist, addToWatchlist, removeFromWatchlist }} />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 
