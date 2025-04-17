@@ -3,9 +3,12 @@
   cursor: pointer;
 
   .nav__link {
-    color: var(--white);
+    /* color: #6ecdc7; */
     text-decoration: none;
     display: flex;
+    gap: 0.5rem;
+
+    color: var(--white);
   }
 }
 
