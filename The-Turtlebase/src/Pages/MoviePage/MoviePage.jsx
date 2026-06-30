@@ -13,7 +13,7 @@ function MoviePage() {
   const [movie, setMovie] = useState(null); // State för att lagra filmens data
   const [error, setError] = useState(null); // För att hålla reda på eventuella fel
 
-  const { data: omdbData, isLoading, isError } = useFetchMovieCard(`http://www.omdbapi.com/?i=${imdbID}&apikey=88d20769`);
+  const { data: omdbData, isLoading, isError } = useFetchMovieCard(`https://www.omdbapi.com/?i=${imdbID}&apikey=88d20769`);
 
   useEffect(() => {
     if (omdbData) {
@@ -49,14 +49,14 @@ function MoviePage() {
     return numericRating ? numericRating[0] : "N/A"; // Returnera siffrorna eller "N/A" om inga siffror hittas
   };
 
-  // Visa "loading" medan vi väntar på data
-  if (isLoading || !movie) {
-    return <p className="loading-text">Loading...</p>;
-  }
-
   // Visa felmeddelande om det finns ett problem
   if (isError || error) {
     return <p className="error-text">{error || "Something went wrong while fetching the movie data."}</p>;
+  }
+
+  // Visa "loading" medan vi väntar på data
+  if (isLoading || !movie) {
+    return <p className="loading-text">Loading...</p>;
   }
 
   return (

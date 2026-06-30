@@ -7,7 +7,7 @@ function SearchPage() {
   const searchprase = useParams();
 
   const apiKey = "27b02bae";
-  const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchprase.searchprase)}`; // encodeURIComponent kodar om en sträng till att blir säker för att använda i en url. Tar bort mellanslag, kolon etc.
+  const url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchprase.searchprase)}`; // encodeURIComponent kodar om en sträng till att blir säker för att använda i en url. Tar bort mellanslag, kolon etc.
   // const url = `http://www.omdbapi.com/?apikey=27b02bae&s=harry%20potter`;
 
   const { data, isLoading, isError } = useFetch(url);
