@@ -1,14 +1,18 @@
+import pokemonIcon from "../assets/pokemon.svg";
+import snapchatIcon from "../assets/snapchat.svg";
+import youtubeIcon from "../assets/youtube.svg";
+
 function Footer() {
   return (
     <footer className="page footer">
       <a href="#">
-        <img src="src/assets/snapchat.svg" alt="Snapchat" />
+        <img src={snapchatIcon} alt="Snapchat" />
       </a>
       <a href="#">
-        <img src="src/assets/youtube.svg" alt="Youtube" />
+        <img src={youtubeIcon} alt="Youtube" />
       </a>
       <a href="#">
-        <img src="src/assets/pokemon.svg" alt="Pokemon" />
+        <img src={pokemonIcon} alt="Pokemon" />
       </a>
     </footer>
   );

@@ -25,7 +25,9 @@ function App() {
         { path: "/watchlist", element: <WatchListPage /> },
       ],
     },
-  ]);
+  ], {
+    basename: "/Iron-Turtles",
+  });
 
   return (
     <div className="app">
