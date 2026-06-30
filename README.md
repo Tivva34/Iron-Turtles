@@ -20,16 +20,6 @@ A modern movie discovery application built with **React** and **Vite**, allowing
 
 ---
 
-## Preview
-
-> Add screenshots or GIFs here.
-
-| Home | Search | Movie Details |
-|------|---------|---------------|
-| Screenshot | Screenshot | Screenshot |
-
----
-
 # Tech Stack
 
 ### Frontend
