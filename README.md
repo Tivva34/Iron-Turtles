@@ -44,7 +44,7 @@ A modern movie discovery application built with **React** and **Vite**, allowing
 # Project Structure
 
 ```text
-vite-project/
+The-Turtlebase/
 │
 ├── src/
 │   │
@@ -117,7 +117,7 @@ git clone https://github.com/Tivva34/Iron-Turtles.git
 ### Navigate to the project
 
 ```bash
-cd Iron-Turtles/vite-project
+cd Iron-Turtles/The-Turtlebase
 ```
 
 ### Install dependencies
@@ -173,14 +173,4 @@ This project helped me improve my understanding of:
 - Performance optimizations
 - Better error handling
 
----
 
-# Author
-
-**Tim Verlage**
-
-Portfolio  
-https://tivva34.github.io/TimVerlage-Portfolio/
-
-💻 GitHub  
-https://github.com/Tivva34
