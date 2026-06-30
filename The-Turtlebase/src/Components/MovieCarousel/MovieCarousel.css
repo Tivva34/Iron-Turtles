@@ -1,0 +1,34 @@
+.swiper {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.swiper-slide {
+  padding: 0;
+  margin: 0;
+}
+.CarouselScreen {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 5px solid black;
+  border-radius: 2rem;
+  display: block;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-size: 60px; /* ändrar knapp storlek */
+  width: 60px; /* ändrar Klickbar knapp location*/
+  height: 60px;
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transform: scale(1.1);
+}
